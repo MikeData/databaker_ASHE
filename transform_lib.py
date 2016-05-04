@@ -2,7 +2,7 @@
 """
 Spyder Editor
 
-Developing basic reusable functions to help transforn data with Pandas.
+Basic reusable functions to help post-process data with Pandas.
 
 Author: Mike
 """
