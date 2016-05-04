@@ -21,7 +21,7 @@ obs_file = pd.read_csv(load_file, dtype=object)
 obs_file.fillna('', inplace = True)
 
 """
-Old Conditional. Left in place for now add I don't to un-indent everything :)
+Old Conditional. Left in place for now but i rly need to un-indent everything :)
 """
 execute = True
 if execute:
