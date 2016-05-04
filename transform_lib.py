@@ -19,3 +19,14 @@ def dismiss(myframe, headers):
             myframe = myframe.drop(myframe.columns[Column1], axis=1)
     return myframe
     
+ 
+Converts everything to string and joins around a single space
+# def strip_and_join(obs_file, dimlist):
+    for x in dimlist:
+        obs_file[x] = obs_file[x].astype(str)
+        obs_file[x] = obs_file[x].map(lambda x: x.strip())
+        obs_file[x] = obs_file[x].map(lambda x: ' '.join(x.split()))        
+    obs_file[dimlist[0]] = obs_file[dimlist[0]] + ' ' + obs_file[dimlist[1]] + ' ' + obs_file[dimlist[2]]
+    obs_file[dimlist[0]] = obs_file[dimlist[0]].map(lambda x: x.strip())
+    return obs_file[dimlist[0]]
+    
