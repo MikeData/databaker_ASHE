@@ -160,6 +160,7 @@ for i in fdone:
 # Build tranlist
 # You can extrapolate the databaked version of the files from the intial name but the formatting
 # changes. This section makes those changes then creates the transform commands.
+# note - D1 and D2 are holding values for dimension name 1 and 2. Theyre overwritten later but we have to use something.
 for i in fdone:
 
     # if its not a b table
@@ -203,7 +204,7 @@ executes 1st command in tranlist
 repeats sequence for 2nd, third etc
 
 Also generates a txt file called 'execute.txt'. This file will hold the full sequence of commands
-so a user can executre individual peices (or make a correction) without re-running the whole thing.
+so a user can execute individual pieces (or make a correction) without re-running the whole thing.
 """
 
 # Create an execute.txt of all commands to be run
@@ -226,12 +227,12 @@ import subprocess as sp
 for count in range(0, len(tranlist)):
 
     # extract table a
-    #p = sp.Popen(bakelista[count], shell=True)          # run each command 
-    #p.communicate()  
+    p = sp.Popen(bakelista[count], shell=True)          # run each command 
+    p.communicate()  
 
     # extract table b
-    #p = sp.Popen(bakelistb[count], shell=True)          # run each command 
-    #p.communicate()  
+    p = sp.Popen(bakelistb[count], shell=True)          # run each command 
+    p.communicate()  
     
     # merge / transform
     p = sp.Popen(tranlist[count], shell=True)            # run each command     
