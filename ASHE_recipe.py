@@ -84,7 +84,6 @@ def per_tab(tab):
     obs = obs - tab.filter(contains_string ('CV > 10% and <= 20%')).shift(-1, -3).expand(RIGHT).expand(DOWN)
     
     # Now use the last parameter to skim off things below the table
-    # PARAMS 8 is Y or N for shiftinh down from PARAMS 6
     if PARAMS(5) == 'N':
         obs = obs - tab.excel_ref('A1').fill(DOWN).filter(contains_string (PARAMS(3))).expand(RIGHT).expand(DOWN)
     else:
