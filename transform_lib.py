@@ -20,8 +20,8 @@ def dismiss(myframe, headers):
     return myframe
     
  
-Converts everything to string and joins around a single space
-# def strip_and_join(obs_file, dimlist):
+# Converts everything to string and joins around a single space
+def strip_and_join(obs_file, dimlist):
     for x in dimlist:
         obs_file[x] = obs_file[x].astype(str)
         obs_file[x] = obs_file[x].map(lambda x: x.strip())
