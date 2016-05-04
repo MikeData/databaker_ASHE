@@ -32,9 +32,11 @@ def per_tab(tab):
     year = filename[-4:]
     tab.dimension(TIME, year)
 
+    # Set the earnings/hours dimension to whatever the tables uniquely measuring
+    # example 'Paid Hours Worked'
     tab.dimension('Earnings', PARAMS(0))
 
-    # Iterate and scrape the rows from and to params 0 and 1 
+    # Iterate and scrape the required header rows
     use_row = 1
     for x in range(3, 6):
         tab.excel_ref(str(x)).dimension("Default Title " + str(use_row), DIRECTLY, ABOVE)
@@ -58,6 +60,8 @@ def per_tab(tab):
         Working_Pattern = 'All'
     tab.dimension("Working Pattern", Working_Pattern) 
 
+    # Capture column A based on how the data is represented
+    # i.e bold and indentation denotes or can denote a hierarcial relationship
     if PARAMS(4) == 'NoBold' or PARAMS(4) == 'NoBoldClipped':
         # It's a Geography one.
         # Take the first and second columns with names provide by PARAMS
@@ -90,7 +94,7 @@ def per_tab(tab):
     if PARAMS(4) == 'BoldnWhite':
         obs = obs - tab.excel_ref('A12').expand(RIGHT).expand(UP)
         
-    # Get rid of the top duplicates for tables 20 and 21
+    # Get rid of the top duplicates for tables 12 and 12
     if PARAMS(4) == 'NoBoldClipped':
         obs = obs - tab.excel_ref('A13').expand(RIGHT).expand(UP) 
 
