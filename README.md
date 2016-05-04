@@ -40,7 +40,7 @@ If you run the commands manually this way, you'll need to finsh with the followi
 
 for example:
 
-```python ASHE_merger 7 2013 ```
+```python ASHE_merger.py 7 2013 ```
 
 
 
