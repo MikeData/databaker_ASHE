@@ -9,7 +9,6 @@ Author: Mike
 
 import pandas as pd
 
-
 # Dismiss command for unwanted items. Will remove all 8 relevant columns.
 def dismiss(myframe, headers):
     
@@ -19,6 +18,16 @@ def dismiss(myframe, headers):
             myframe = myframe.drop(myframe.columns[Column1], axis=1)
     return myframe
     
+
+# Write over the current topic dimension numbering with correct numbering
+def validateheaders(myframe):
+    standard_headings = ['dim_id_', 'dimension_label_eng_', 'dimension_label_cym_', 'dim_item_id_',
+                         'dimension_item_label_eng_', 'dimension_item_label_cym_', 'is_total_', 'is_sub_total_']
+    for count in range(35, len(myframe.columns.values), 8):
+        for x in range(0, 8):
+           myframe.rename(columns={myframe.columns[count+x]: standard_headings[x] + str((count-35) / 8 + 1)}, inplace=True)
+    return myframe
+
  
 # Converts everything to string and joins around a single space
 def strip_and_join(obs_file, dimlist):
