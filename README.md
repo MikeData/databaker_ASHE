@@ -21,7 +21,10 @@ The geography based tables are tables (7-12).
 
 2.) Download and extract the zip file for your chosen ASHE table 
 
-3.) Enter the table number you're converting (7 for ASHE table 7 etc)
+3.) Double click the "CLICK TO RUN ON WINDOWS" batch file
+
+4.) Enter the table number you're converting (7 for ASHE table 7 etc)
+
 
 ## Warnings
 
