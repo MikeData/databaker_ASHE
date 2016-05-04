@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+# Some quick lookups required to render the various ASHE tables user friendly
  
 def locatiionTOgeocode(myframe, header):
     this_lookup = [
