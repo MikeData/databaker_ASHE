@@ -19,7 +19,6 @@ def dismiss(myframe, headers):
         Column1 = myframe.columns.get_loc(each)
         for x in range(1, 9):
             myframe = myframe.drop(myframe.columns[Column1], axis=1)
-        # print 'Dismissed ' + str(each) + ' and associated fields.'
     return myframe
     
 """
