@@ -36,9 +36,9 @@ You can run these manually one at a time from the command line (just navigate to
 
 If you run the commands manually this way, you'll need to finsh with the following command to merge the successfully extracted files:
 
-```python ASHE_merger <TABLE NUMBER> <YEAR> ```
+```python ASHE_manual_merge.py <TABLE NUMBER> <YEAR> ```
 
 for example:
 
-```python ASHE_merger.py 7 2013 ```
+```python ASHE_manual_merge.py 7 2013 ```
 
