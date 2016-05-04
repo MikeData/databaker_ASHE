@@ -21,10 +21,10 @@ obs_file = pd.read_csv(load_file, dtype=object)
 obs_file.fillna('', inplace = True)
 
 """
-Old Conditional. Left in place for now as its not hurting anything
+Old Conditional. Left in place for now add I don't to un-indent everything :)
 """
 execute = True
-if execute == True:
+if execute:
     
     # Sortout the mean/median thing, one for every other instance of mean or median
     flip  = 0
@@ -49,16 +49,14 @@ if execute == True:
     
     """
     CONDITIONALS
-    This is the code that will change depending on the ASHE number being transformed.
+    This is the code that will change depending on the ASHE table number being transformed.
     """
 
     # -----------------------------------------------------------------------------------------------------------------------------------------------
     # -----------------------------------------------------------------------------------------------------------------------------------------------
 
-
     if numASHE in ['1', '26']:
         obs_file = tf.dismiss(obs_file, ['dim_id_7', 'dim_id_8'])
-
 
     # -----------------------------------------------------------------------------------------------------------------------------------------------
     # -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -379,8 +377,6 @@ if execute == True:
     
     # TODO - tidy this up
     new_file = new_file.replace('Areb', 'Area')
-    #new_file = new_file.replace(' Bold', ',Bold')
-    #new_file = new_file.replace(' NoBold', ',NoBold')
     CV_file = pd.read_csv(new_file, dtype=object)
     CV_file.fillna('', inplace=True)
     
