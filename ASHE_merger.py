@@ -97,22 +97,3 @@ def merge_hours(which_ASHE, fdone):
     # Output final product
     obs_file.to_csv('transform-ASHE' + str(which_ASHE)+ 'hours' + fdone[0][-8:-4] + '.csv', index=False)
     
-    
-    
-    
-"""  
-Manual running code
-Re-creates the automatic inputs and lets someone skip straight to merging the final files
-"""
-import sys
-
-# Which table
-which_ASHE = sys.argv[1]
-
-# Adds a load of filler to year and puts it in a list, so the script can execute wihout conditionals
-fdone = []
-fdone.append(sys.argv[2] + '####')
-
-# runs merge scripts
-merge_earnings(which_ASHE, fdone)
-merge_hours(which_ASHE, fdone)
