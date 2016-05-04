@@ -42,12 +42,3 @@ for example:
 
 ```python ASHE_merger.py 7 2013 ```
 
-
-
-
-
-
-
-
-
-
