@@ -42,3 +42,7 @@ for example:
 
 ```python ASHE_manual_merge.py 7 2013 ```
 
+
+## Structure
+
+This recipe is intended for use with a very specific legacy output structure. If you're a visitor and running (I wouldnt advise it - use the demo), you'll need to use the WDA structure_csv_user.py file stored elsewherer on our github.
