@@ -88,7 +88,6 @@ if execute:
             obs_file['dim_id_7'] = 'Area'
             obs_file['dimension_label_eng_7'] = obs_file['dim_id_7']
             
-            # Switch the 2nd appearend of an Area. i,e swap 'Wales - Wales' to 'Wales - All'
             obs_file['dim_item_id_7'] = obs_file['dim_item_id_7'].map(str.strip)
             obs_file['dim_item_id_8'] = obs_file['dim_item_id_8'].map(str.strip)
 
